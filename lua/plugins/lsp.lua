@@ -1,24 +1,49 @@
 return {
   {
-    'folke/lazydev.nvim',
-    ft = 'lua',
-    opts = {}
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {},
   },
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "neovim/nvim-lspconfig" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "jsonls", "stylua", "prettier" },
-        automatic_installation = true
+        ensure_installed = {
+          "lua_ls",
+          "ts_ls",
+          "jsonls",
+        },
+        automatic_installation = true,
       })
+    end,
+  },
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    config = function()
+      require('mason-tool-installer').setup {
+        ensure_installed = {
+          'stylua',
+          'prettierd',
+          'markdownlint',
+          'eslint_d',
+          'luacheck',
+        },
+        -- auto_update = true,
+        -- run_on_start = true,
+        -- start_delay = 3000,
+        -- debounce_hours = 5,
+        integrations = {
+          ['mason-lspconfig'] = true
+        }
+      }
     end
   },
   {
@@ -35,7 +60,7 @@ return {
     config = function(_, opts)
       local lspconfig = require("lspconfig")
 
-      local function on_attach(client, bufnr)
+      local function on_attach(_, bufnr)
         -- Set buffer-local options
         vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
 
@@ -55,7 +80,7 @@ return {
         map("n", "gi", vim.lsp.buf.implementation, "Go to Implementation")
         -- Show references
         -- map("n", "gr", vim.lsp.buf.references, "Find References")
-        map('n', 'gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+        map("n", "gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
         -- See available code actions
         map("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
         -- Rename symbol under cursor
@@ -83,5 +108,5 @@ return {
         lspconfig[server].setup(config)
       end
     end,
-  }
+  },
 }

@@ -6,4 +6,3 @@ TODO:
 
 - fix keymap groups
 - linting
-- oil
