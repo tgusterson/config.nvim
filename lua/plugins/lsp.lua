@@ -28,7 +28,8 @@ return {
       servers = {
         lua_ls = {},
         ts_ls = {},
-        jsonls = {}
+        jsonls = {},
+        marksman = {},
       },
     },
     config = function(_, opts)
