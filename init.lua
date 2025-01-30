@@ -3,7 +3,6 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -103,6 +102,9 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<C-\\>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "\\", "<CMD>Neotree toggle<CR>", { desc = "Open file tree" })
 
+-- Leave insert mode, oress l, press a. I use this as an easy way to jump out of autopaired characters.
+-- Could look into different autopairing plugin which offers this feature but this is good enough for now.
+vim.keymap.set("i", "<C-j>", "<Esc>la", { noremap = true, silent = true })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
