@@ -6,7 +6,7 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local lint = require("lint")
-			lint.linters_by_ft = ensure_installed
+			lint.linters_by_ft = ensure_installed.linters
 			-- markdown = { "markdownlint" },
 			-- lua = { "luacheck" },
 			-- html = { "htmlhint" },
