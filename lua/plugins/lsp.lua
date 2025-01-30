@@ -84,9 +84,9 @@ return {
         -- map("n", "gr", vim.lsp.buf.references, "Find References")
         map("n", "gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
         -- See available code actions
-        map("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
+        map("n", "<leader>c", vim.lsp.buf.code_action, "Code Action")
         -- Rename symbol under cursor
-        map("n", "<leader>rn", vim.lsp.buf.rename, "Rename Symbol")
+        map("n", "<leader>r", vim.lsp.buf.rename, "Rename Symbol")
         -- Go to declaration
         map("n", "gD", vim.lsp.buf.declaration, "Go to Declaration")
         -- Signature help (function signature while typing)
