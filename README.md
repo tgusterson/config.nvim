@@ -5,4 +5,4 @@ git clone https://github.com/tgusterson/config.nvim.git "${XDG_CONFIG_HOME:-$HOM
 TODO:
 
 - fix keymap groups
-- linting
+- make it easier to set ensure_installed linters and formatters

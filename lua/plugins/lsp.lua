@@ -20,6 +20,7 @@ return {
           "lua_ls",
           "ts_ls",
           "jsonls",
+          "marksman",
         },
         automatic_installation = true,
       })
@@ -35,6 +36,7 @@ return {
           'markdownlint',
           'eslint_d',
           'luacheck',
+          'htmlhint'
         },
         -- auto_update = true,
         -- run_on_start = true,
