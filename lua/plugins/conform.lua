@@ -1,3 +1,5 @@
+local ensure_installed = require("config.ensure_installed")
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -27,13 +29,6 @@ return {
 				lsp_format = lsp_format_opt,
 			}
 		end,
-		formatters_by_ft = {
-			lua = { 'stylua' },
-			html = { 'prettierd' },
-			javascript = { 'prettierd' },
-			typescript = { 'prettierd' },
-			typescriptreact = { 'prettierd' },
-			javascriptreact = { 'prettierd' },
-		},
+		formatters_by_ft = ensure_installed.formatters,
 	},
 }
