@@ -31,9 +31,9 @@ vim.opt.mouse = "a"
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
-end)
+-- vim.schedule(function()
+-- 	vim.opt.clipboard = "unnamedplus"
+-- end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -75,6 +75,10 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+
+vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
+
 vim.keymap.set("n", ";", ":", { noremap = true })
 vim.keymap.set("n", "<shift>:", ";", { noremap = true })
 -- Clear highlights on search when pressing <Esc> in normal mode
