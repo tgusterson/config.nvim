@@ -4,8 +4,9 @@ local M = {}
 -- Imported into lsp, linting and formating plugins to save listing multiple times
 M.lsp = {
 	lua_ls = {},
-	ts_ls = {},
+	eslint = {},
 	jsonls = {},
+	ts_ls = {},
 	marksman = {},
 }
 
@@ -13,10 +14,10 @@ M.linters = {
 	markdown = { "markdownlint" },
 	lua = { "luacheck" },
 	html = { "htmlhint" },
-	javascript = { "eslint_d" },
-	typescript = { "eslint_d" },
-	typescriptreact = { "eslint_d" },
-	javascriptreact = { "eslint_d" },
+	-- javascript = { "eslint_d" },
+	-- typescript = { "eslint_d" },
+	-- typescriptreact = { "eslint_d" },
+	-- javascriptreact = { "eslint_d" },
 }
 
 M.formatters = {
