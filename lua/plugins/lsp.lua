@@ -1,11 +1,6 @@
 local ensure_installed = require("config.ensure_installed")
 return {
 	{
-		"folke/lazydev.nvim",
-		ft = "lua",
-		opts = {},
-	},
-	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate",
 		config = function()
