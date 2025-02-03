@@ -12,7 +12,7 @@ M.lsp = {
 
 M.linters = {
 	markdown = { "markdownlint" },
-	lua = { "luacheck" },
+	-- lua = { "luacheck" },
 	html = { "htmlhint" },
 	-- javascript = { "eslint_d" },
 	-- typescript = { "eslint_d" },
