@@ -69,7 +69,7 @@ return {
 				-- Go to declaration
 				map("n", "gD", vim.lsp.buf.declaration, "Go to Declaration")
 				-- Signature help (function signature while typing)
-				map("n", "<leader>sh", vim.lsp.buf.signature_help, "Signature Help")
+				map("n", "<leader>h", vim.lsp.buf.signature_help, "Signature Help")
 
 				-- Diagnostic-related keymaps
 				----------------------------------------------------------------------------

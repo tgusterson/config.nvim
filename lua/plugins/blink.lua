@@ -21,7 +21,7 @@ return {
 			preset = "enter",
 			["<Tab>"] = { "select_next", "fallback" },
 			["<C-Tab>"] = { "snippet_forward", "fallback" },
-			cmdline = { preset = "super-tab" },
+			cmdline = { preset = "default" },
 		},
 		appearance = {
 			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
