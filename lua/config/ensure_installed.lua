@@ -1,26 +1,23 @@
 local M = {}
 
 -- Define LSPs, linters, and formatters
--- Imported into lsp, linting and formating plugins to save listing multiple times
 M.lsp = {
 	lua_ls = {},
 	eslint = {},
 	jsonls = {},
 	ts_ls = {},
 	marksman = {},
+	pyright = {},
 }
 
 M.linters = {
+	python = { "pylint" },
 	markdown = { "markdownlint" },
-	-- lua = { "luacheck" },
 	html = { "htmlhint" },
-	-- javascript = { "eslint_d" },
-	-- typescript = { "eslint_d" },
-	-- typescriptreact = { "eslint_d" },
-	-- javascriptreact = { "eslint_d" },
 }
 
 M.formatters = {
+	python = { "pyink" },
 	lua = { "stylua" },
 	html = { "prettierd" },
 	javascript = { "prettierd" },
@@ -56,6 +53,28 @@ end
 M.lsp_list = M.extract_lsp_servers(M.lsp)
 M.linters_list = M.extract_unique_tools(M.linters)
 M.formatters_list = M.extract_unique_tools(M.formatters)
-M.tools_list = vim.tbl_extend("force", M.linters_list, M.formatters_list)
+
+local function merge_tool_lists(list1, list2)
+	local merged = {}
+	local seen = {}
+
+	for _, tool in ipairs(list1) do
+		if not seen[tool] then
+			table.insert(merged, tool)
+			seen[tool] = true
+		end
+	end
+
+	for _, tool in ipairs(list2) do
+		if not seen[tool] then
+			table.insert(merged, tool)
+			seen[tool] = true
+		end
+	end
+
+	return merged
+end
+
+M.tools_list = merge_tool_lists(M.linters_list, M.formatters_list)
 
 return M

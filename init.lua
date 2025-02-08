@@ -103,7 +103,7 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
-vim.keymap.set("n", "<M-\\>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<C-\\>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "\\", "<CMD>Neotree toggle<CR>", { desc = "Open file tree" })
 
 -- Leave insert mode, oress l, press a. I use this as an easy way to jump out of autopaired characters.
