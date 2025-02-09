@@ -11,7 +11,7 @@ M.lsp = {
 }
 
 M.linters = {
-	python = { "pylint" },
+	python = { "flake8" },
 	markdown = { "markdownlint" },
 	html = { "htmlhint" },
 }
