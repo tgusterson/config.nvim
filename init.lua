@@ -79,7 +79,8 @@ vim.opt.scrolloff = 10
 vim.keymap.set("n", "<leader>y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("v", "<leader>y", '"+y', { noremap = true, silent = true })
 
-vim.keymap.set("n", ";", ":", { noremap = true })
+-- vim.keymap.set("n", ";", ":", { noremap = true })
+vim.keymap.set("n", "<leader>;", ":", { noremap = true, desc = "Command mode" })
 vim.keymap.set("n", "<shift>:", ";", { noremap = true })
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
