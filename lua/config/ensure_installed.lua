@@ -24,6 +24,7 @@ M.formatters = {
 	typescript = { "prettierd" },
 	typescriptreact = { "prettierd" },
 	javascriptreact = { "prettierd" },
+	graphql = { "prettierd" },
 }
 
 function M.extract_lsp_servers(lsp_table)
