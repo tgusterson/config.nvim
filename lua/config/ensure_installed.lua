@@ -8,6 +8,7 @@ M.lsp = {
 	ts_ls = {},
 	marksman = {},
 	pyright = {},
+	tailwindcss = {},
 }
 
 M.linters = {

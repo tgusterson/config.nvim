@@ -45,6 +45,10 @@ return {
 						"!**/dist/**",
 						"--glob",
 						"!**/.git/**",
+						"--glob",
+						"!**lock.yaml",
+						"--glob",
+						"!**.json",
 					}
 				end,
 			})
